@@ -14,6 +14,6 @@ app.use("/users", userRoutes);
 app.use("/products", productRoute);
 
 
-app.listen(4000, () => {
+app.listen(80, () => {
     console.log('listening at 4000')
 })
