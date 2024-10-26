@@ -15,5 +15,5 @@ app.use("/products", productRoute);
 
 
 app.listen(80, () => {
-    console.log('listening at 4000')
+    console.log('listening at 80')
 })
