@@ -25,7 +25,7 @@ export default function Login() {
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     try {
-      const response = await axios.get("http://localhost:4000/users");
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/users`);
       const users = response.data;
       console.log(users);
       console.log(formData)
