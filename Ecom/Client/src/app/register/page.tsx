@@ -29,7 +29,7 @@ export default function Page() {
     try {
       console.log(formData);
       const response = await axios.post(
-        "http://localhost:4000/users",
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/users`,
         formData
       );
 
