@@ -10,7 +10,7 @@ export default function shop() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/products");
+        const response = await axios.get("${process.env.NEXT_PUBLIC_API_BASE_URL}/products");
         setProducts(response.data);
         console.log(response.data)
       } catch (err) {
@@ -45,55 +45,6 @@ export default function shop() {
             price={product.price}
           />
         ))}
-        
-        {/* <Card
-          name="Beautiful Mustang"
-          desc="Explore the beauty of this Mustang"
-          imageUrl="/mustang.jpg"
-          price="1cr"
-        />
-        <Card
-          title="Beautiful Supra"
-          name="Explore the beauty of this Supra"
-          imageUrl="/supra.jpg"
-          price="1cr"
-        />
-        <Card
-          title="Beautiful Glider"
-          name="Explore the beauty of this Glider"
-          imageUrl="/cyberpunk1.jpg"
-          price="1cr"
-        />
-        <Card
-          title="Beautiful Muscle"
-          name="Explore the beauty of this Muscle car"
-          imageUrl="/cyberpunk2.jpg"
-          price="1cr"
-        />
-        <Card
-          title="Beautiful Mustang"
-          name="Explore the beauty of this Mustang"
-          imageUrl="/mustang.jpg"
-          price="1cr"
-        />
-        <Card
-          title="Beautiful Supra"
-          name="Explore the beauty of this Supra"
-          imageUrl="/supra.jpg"
-          price="1cr"
-        />
-        <Card
-          title="Beautiful Glider"
-          name="Explore the beauty of this Glider"
-          imageUrl="/cyberpunk1.jpg"
-          price="1cr"
-        />
-        <Card
-          title="Beautiful Muscle"
-          name="Explore the beauty of this Muscle car"
-          imageUrl="/cyberpunk2.jpg"
-          price="1cr"
-        /> */}
       </div>
     </>
   );
