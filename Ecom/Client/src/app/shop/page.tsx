@@ -10,7 +10,7 @@ export default function shop() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("${process.env.NEXT_PUBLIC_API_BASE_URL}/products");
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/products`);
         setProducts(response.data);
         console.log(response.data)
       } catch (err) {
